@@ -1,0 +1,31 @@
+  * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  html, body { background:#FFFFFF; height:100%; overflow:hidden; overflow-x:hidden; width:100%; max-width:100%; position:fixed; inset:0; }
+  #root { height:100%; }
+  input, textarea, button { font-family:inherit; }
+  button { -webkit-appearance:none; appearance:none; background:transparent; border:none; color:inherit; cursor:pointer; }
+  .scrollpane { height:100%; overflow-y:auto; overflow-x:hidden; -webkit-overflow-scrolling:touch; }
+  ::-webkit-scrollbar { width:0; height:0; }
+
+  @keyframes riseIn { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
+  .rise { animation:riseIn 460ms cubic-bezier(.2,.85,.25,1) both; animation-delay:calc(var(--i,0) * 45ms); }
+  @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+  .fade { animation:fadeIn 300ms ease both; }
+  @keyframes popIn { 0% { opacity:0; transform:scale(.85); } 55% { transform:scale(1.04); } 100% { opacity:1; transform:scale(1); } }
+  .pop { animation:popIn 380ms cubic-bezier(.2,.85,.25,1) both; }
+  @keyframes cardIn { from { opacity:0; transform:translateY(14px) scale(.97); } to { opacity:1; transform:translateY(0) scale(1); } }
+  .card-in { animation:cardIn 420ms cubic-bezier(.2,.85,.25,1) both; }
+  @keyframes sheet { from { transform:translateY(100%); } to { transform:translateY(0); } }
+  .sheet { animation:sheet 340ms cubic-bezier(.2,.9,.3,1) both; }
+  @keyframes overlayIn { from { opacity:0; } to { opacity:1; } }
+  .overlay-in { animation:overlayIn 220ms ease both; }
+  @keyframes barGrow { from { transform:scaleX(0); } to { transform:scaleX(1); } }
+  .bar-grow { transform-origin:left; animation:barGrow 700ms cubic-bezier(.2,.85,.25,1) both; animation-delay:calc(var(--i,0) * 70ms); }
+  @keyframes toastIn { from { opacity:0; transform:translate(-50%, 14px); } to { opacity:1; transform:translate(-50%, 0); } }
+  .toast-in { animation:toastIn 260ms cubic-bezier(.2,.85,.25,1) both; }
+  @keyframes bnc { 0%,100% { transform:translateY(0); } 50% { transform:translateY(7px); } }
+  .bounce { animation:bnc 1.4s ease-in-out infinite; }
+  @keyframes keyPop { 0% { transform:scale(1); } 50% { transform:scale(.92); } 100% { transform:scale(1); } }
+
+  .press { transition:transform 130ms cubic-bezier(.2,.8,.2,1), box-shadow 200ms ease, background 180ms ease; }
+  .press:active { transform:scale(.94); }
+  .lift { transition:transform 200ms cubic-bezier(.2,.85,.25,1), box-shadow 240ms ease; }
